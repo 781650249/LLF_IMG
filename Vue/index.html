@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="app">
+    <p>姓名: {{name}}</p>
+    <p>年龄: {{age}}</p>
+    <button onClick="vm.age++">增加年龄</button>
+    <dl>
+        <dd>省份:{{attr.province}}</dd>
+        <dd>城市:{{attr.city}}</dd>
+    </dl>
+    修改省份: <input type="text" oninput="vm.attr.province = this.value" />
+</div>
+
+<body>
+    <script type="module">
+          import Vue from './vue/Vue.js'
+        window.vm = new Vue({
+            el: '#app',
+            data: {
+                name: 'monica',
+                age: 16,
+                attr: {
+                    province: '黑龙江',
+                    city: '哈尔滨'
+                }
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
