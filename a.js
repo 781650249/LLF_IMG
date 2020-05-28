@@ -1,12 +1,16 @@
-let p = new Promise(function(resolve, reject){
-    setTimeout(function(){
-      resolve(100)  
-    }, 1000)
-  })
-  p.then(function(data){
-    console.log('成功', data)
-  },function(err){
-    console.log('失败', err)
-  })
-  // 不会输出任何代码
-  
+var  a = 'aabbcc'
+var  b = 'bb'
+var  c = 'cc'
+
+
+
+function isHasB(a){
+  if(a.indexOf(b)!=-1){
+     a = a.replace(b,c)
+    // console.log(a)
+    }
+    // console.log(a)
+    return 
+}
+
+isHasB(a)
